@@ -10,7 +10,19 @@ const defaultArgs = {
   note: 'E',
 };
 
-const Template = args => <Note {...args} />;
+const Template = args => (
+  <div className="story">
+    <Note {...args} />
+    <style jsx>{`
+      .story {
+        display: flex;
+        align-items: center;
+        height: 3em;
+        background-color: #968455;
+      }
+    `}</style>
+  </div>
+);
 
 export const Default = Template.bind({});
 Default.args = { ...defaultArgs };
