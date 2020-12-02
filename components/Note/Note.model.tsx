@@ -1,8 +1,3 @@
-export interface NoteType {
-  visible: boolean;
-  note: NotePitch;
-}
-
 export enum NotePitch {
   A = 'A',
   AB_HALF = 'A#/Bb',

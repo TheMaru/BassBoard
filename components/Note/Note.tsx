@@ -1,6 +1,11 @@
-import { NoteType } from './Note.model';
+import { NotePitch } from './Note.model';
 
-export const Note = ({ visible, note }: NoteType) => (
+interface NoteProps {
+  visible: boolean;
+  note: NotePitch;
+}
+
+export const Note = ({ visible, note }: NoteProps) => (
   <div className="root">
     <div className="string"></div>
     {visible && <span className="text">{note}</span>}
@@ -10,6 +15,7 @@ export const Note = ({ visible, note }: NoteType) => (
         display: flex;
         justify-content: center;
         width: 100%;
+        margin: 1em 0;
       }
 
       .text {
@@ -18,6 +24,7 @@ export const Note = ({ visible, note }: NoteType) => (
         text-align: center;
         line-height: 1;
         z-index: 1;
+        text-shadow: 0 0 5px #000;
       }
 
       .string {
