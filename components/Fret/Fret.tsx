@@ -1,7 +1,7 @@
 import { Note } from '../Note/Note';
 import { NotePitch } from '../Note/Note.model';
 
-interface FretProps {
+export interface FretProps {
   fret: number;
 }
 
@@ -25,7 +25,7 @@ export const Fret = ({ fret }: FretProps) => {
       <style jsx>{`
         .root {
           position: relative;
-          background-color: brown;
+          background-color: #d2ab67;
         }
 
         .fret-marker {

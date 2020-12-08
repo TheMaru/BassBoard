@@ -1,4 +1,6 @@
-import { Note } from './Note';
+import { Note, NoteProps } from './Note';
+import { NotePitch } from './Note.model';
+import { Story } from '@storybook/react/types-6-0';
 
 export default {
   title: 'Components/Note',
@@ -7,10 +9,10 @@ export default {
 
 const defaultArgs = {
   visible: true,
-  note: 'E',
+  note: NotePitch.E,
 };
 
-const Template = args => (
+const Template: Story<NoteProps> = args => (
   <div className="story">
     <Note {...args} />
     <style jsx>{`
@@ -18,7 +20,7 @@ const Template = args => (
         display: flex;
         align-items: center;
         height: 3em;
-        background-color: #968455;
+        background-color: #d2ab67;
       }
     `}</style>
   </div>

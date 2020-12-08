@@ -1,6 +1,6 @@
 import { NotePitch } from './Note.model';
 
-interface NoteProps {
+export interface NoteProps {
   visible: boolean;
   note: NotePitch;
 }
@@ -32,7 +32,7 @@ export const Note = ({ visible, note }: NoteProps) => (
         height: 50%;
         width: 100%;
         top: 0.25em;
-        background-color: #666666;
+        background-color: #231f20;
       }
     `}</style>
   </div>

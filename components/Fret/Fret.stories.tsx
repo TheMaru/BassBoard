@@ -1,4 +1,5 @@
-import { Fret } from './Fret';
+import { Fret, FretProps } from './Fret';
+import { Story } from '@storybook/react/types-6-0';
 
 export default {
   title: 'Components/Fret',
@@ -9,7 +10,7 @@ const defaultArgs = {
   fret: 1,
 };
 
-const Template = args => <Fret {...args} />;
+const Template: Story<FretProps> = args => <Fret {...args} />;
 
 export const Default = Template.bind({});
 Default.args = { ...defaultArgs };
