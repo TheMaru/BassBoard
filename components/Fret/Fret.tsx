@@ -25,7 +25,16 @@ export const Fret = ({ fret }: FretProps) => {
       <style jsx>{`
         .root {
           position: relative;
-          background-color: #d2ab67;
+          flex: 1 1 auto;
+        }
+
+        .root:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 0.3em;
+          background-color: #1b1b1b;
         }
 
         .fret-marker {

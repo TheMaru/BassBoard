@@ -18,4 +18,9 @@ export const globalStyles = css.global`
   * {
     box-sizing: border-box;
   }
+
+  :root {
+    --fingerboard-color: #d2ab67;
+    --string-color: #413d3e;
+  }
 `;

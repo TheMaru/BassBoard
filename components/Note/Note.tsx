@@ -32,7 +32,7 @@ export const Note = ({ visible, note }: NoteProps) => (
         height: 50%;
         width: 100%;
         top: 0.25em;
-        background-color: #231f20;
+        background-color: var(--string-color);
       }
     `}</style>
   </div>

@@ -20,7 +20,7 @@ const Template: Story<NoteProps> = args => (
         display: flex;
         align-items: center;
         height: 3em;
-        background-color: #d2ab67;
+        background-color: var(--fingerboard-color);
       }
     `}</style>
   </div>
