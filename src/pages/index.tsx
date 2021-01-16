@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { NotePitch } from '../components/Note/Note.model';
 import { Fret } from '../components/Fret/Fret';
 
 export default function Home() {
@@ -11,7 +12,10 @@ export default function Home() {
 
       <main>
         <h1>main content</h1>
-        <Fret />
+        <Fret
+          fretNumber={0}
+          stringRootNotes={[NotePitch.E, NotePitch.A, NotePitch.D, NotePitch.G]}
+        />
       </main>
 
       <footer>footer content</footer>

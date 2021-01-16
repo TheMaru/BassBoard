@@ -1,4 +1,4 @@
-import { globalStyles } from '../pages/styles';
+import { globalStyles } from '../src/pages/styles';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },

@@ -15,7 +15,7 @@ export const Fingerboard = ({
   const renderFrets = () => {
     let frets = [];
     for (let i = 1; i <= amountFrets; ++i) {
-      frets.push(<Fret fret={i} />);
+      frets.push(<Fret fretNumber={i} stringRootNotes={stringRootNotes} />);
     }
 
     return <>{frets}</>;
@@ -23,7 +23,7 @@ export const Fingerboard = ({
 
   return (
     <div className="root">
-      <Fret fret={0} />
+      <Fret fretNumber={0} stringRootNotes={stringRootNotes} />
       <div className="nut"></div>
       {renderFrets()}
       <style jsx>{`

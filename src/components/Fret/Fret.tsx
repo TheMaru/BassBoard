@@ -1,18 +1,29 @@
 import { Note } from '../Note/Note';
-import { NotePitch } from '../Note/Note.model';
+import { NotePitch, NoteSequence } from '../Note/Note.model';
 
 export interface FretProps {
-  fret: number;
+  fretNumber: number;
+  stringRootNotes: Array<NotePitch>;
 }
 
-export const Fret = ({ fret }: FretProps) => {
-  console.log(fret);
+export const Fret = ({ fretNumber, stringRootNotes }: FretProps) => {
   const fretMarkers = [3, 5, 7, 9, 15, 17, 19, 21];
   const doubleFretMarkers = [12, 24];
+
+  const calculateNote = (stringRootNote: NotePitch, fretNumber: number) => {
+    const indexOfRoot = NoteSequence.indexOf(stringRootNote);
+    if (indexOfRoot + fretNumber >= NoteSequence.length) {
+      return null; //TODO implement
+    }
+
+    return NoteSequence[indexOfRoot + fretNumber];
+  };
+
+  console.log(calculateNote(NotePitch.E, 1));
   return (
-    <div className="root">
-      {fretMarkers.includes(fret) && <div className="fret-marker"></div>}
-      {doubleFretMarkers.includes(fret) && (
+    <div className="fret">
+      {fretMarkers.includes(fretNumber) && <div className="fret-marker"></div>}
+      {doubleFretMarkers.includes(fretNumber) && (
         <div className="double-fret-marker">
           <div className="marker1"></div>
           <div className="marker2"></div>
@@ -23,12 +34,12 @@ export const Fret = ({ fret }: FretProps) => {
       <Note visible note={NotePitch.A} />
       <Note visible note={NotePitch.E} />
       <style jsx>{`
-        .root {
+        .fret {
           position: relative;
           flex: 1 1 auto;
         }
 
-        .root:after {
+        .fret:after {
           content: '';
           position: absolute;
           top: 0;
