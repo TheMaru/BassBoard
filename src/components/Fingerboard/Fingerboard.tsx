@@ -10,12 +10,17 @@ export interface FingerboardProps {
 export const Fingerboard = ({
   amountFrets = 21,
   stringRootNotes = [NotePitch.E, NotePitch.A, NotePitch.D, NotePitch.G],
-  stringSum = 4,
 }: FingerboardProps) => {
   const renderFrets = () => {
     let frets = [];
     for (let i = 1; i <= amountFrets; ++i) {
-      frets.push(<Fret fretNumber={i} stringRootNotes={stringRootNotes} />);
+      frets.push(
+        <Fret
+          key={`fret-${i}`}
+          fretNumber={i}
+          stringRootNotes={stringRootNotes}
+        />
+      );
     }
 
     return <>{frets}</>;
@@ -23,7 +28,7 @@ export const Fingerboard = ({
 
   return (
     <div className="root">
-      <Fret fretNumber={0} stringRootNotes={stringRootNotes} />
+      <Fret fretNumber={0} stringRootNotes={stringRootNotes.reverse()} />
       <div className="nut"></div>
       {renderFrets()}
       <style jsx>{`

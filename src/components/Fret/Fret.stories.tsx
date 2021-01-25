@@ -1,4 +1,5 @@
 import { Fret, FretProps } from './Fret';
+import { NotePitch } from '../Note/Note.model';
 import { Story } from '@storybook/react/types-6-0';
 
 export default {
@@ -7,7 +8,8 @@ export default {
 };
 
 const defaultArgs = {
-  fret: 1,
+  fretNumber: 1,
+  stringRootNotes: [NotePitch.E, NotePitch.A, NotePitch.D, NotePitch.G],
 };
 
 const Template: Story<FretProps> = args => <Fret {...args} />;

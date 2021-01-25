@@ -12,14 +12,13 @@ export const Fret = ({ fretNumber, stringRootNotes }: FretProps) => {
 
   const calculateNote = (stringRootNote: NotePitch, fretNumber: number) => {
     const indexOfRoot = NoteSequence.indexOf(stringRootNote);
-    if (indexOfRoot + fretNumber >= NoteSequence.length) {
-      return null; //TODO implement
+    const noteIndex = indexOfRoot + fretNumber;
+    if (noteIndex >= NoteSequence.length) {
+      return NoteSequence[noteIndex % NoteSequence.length];
     }
-
-    return NoteSequence[indexOfRoot + fretNumber];
+    return NoteSequence[noteIndex];
   };
 
-  console.log(calculateNote(NotePitch.E, 1));
   return (
     <div className="fret">
       {fretMarkers.includes(fretNumber) && <div className="fret-marker"></div>}
@@ -29,10 +28,9 @@ export const Fret = ({ fretNumber, stringRootNotes }: FretProps) => {
           <div className="marker2"></div>
         </div>
       )}
-      <Note visible note={NotePitch.G} />
-      <Note visible note={NotePitch.D} />
-      <Note visible note={NotePitch.A} />
-      <Note visible note={NotePitch.E} />
+      {stringRootNotes.map(stringRootNote => (
+        <Note visible note={calculateNote(stringRootNote, fretNumber)} />
+      ))}
       <style jsx>{`
         .fret {
           position: relative;
