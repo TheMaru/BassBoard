@@ -1,16 +1,16 @@
 export enum NotePitch {
   A = 'A',
-  AB_HALF = 'A#/Bb',
+  AB_HALF = 'A\u266F/B\u266D',
   B = 'B',
   C = 'C',
-  CD_HALF = 'C#/Db',
+  CD_HALF = 'C\u266F/D\u266D',
   D = 'D',
-  DE_HALF = 'D#/Eb',
+  DE_HALF = 'D\u266F/E\u266D',
   E = 'E',
   F = 'F',
-  FG_HALF = 'F#/Gb',
+  FG_HALF = 'F\u266F/G\u266D',
   G = 'G',
-  GA_HALF = 'G#/Ab',
+  GA_HALF = 'G\u266F/A\u266D',
 }
 
 export const NoteSequence: Array<NotePitch> = [
