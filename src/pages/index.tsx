@@ -1,8 +1,9 @@
 import Head from 'next/head';
-import { NotePitch } from '../components/Note/Note.model';
-import { Fret } from '../components/Fret/Fret';
 
-export default function Home() {
+import { Fret } from '../components/Fret/Fret';
+import { NotePitch } from '../components/Note/Note.model';
+
+export default function Home(): JSX.Element {
   return (
     <div>
       <Head>
