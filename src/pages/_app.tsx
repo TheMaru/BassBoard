@@ -2,7 +2,7 @@ import { AppProps } from 'next/app';
 
 import { globalStyles } from './styles';
 
-function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   return (
     <>
       <Component {...pageProps} />
@@ -11,6 +11,6 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
       </style>
     </>
   );
-}
+};
 
 export default MyApp;

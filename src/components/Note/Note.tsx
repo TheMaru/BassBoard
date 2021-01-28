@@ -1,13 +1,13 @@
 import { NotePitch } from './Note.model';
 
-export interface NoteProps {
+export type NoteProps = {
   visible: boolean;
   note: NotePitch;
-}
+};
 
-export const Note = ({ visible, note }: NoteProps) => (
+export const Note = ({ visible, note }: NoteProps): JSX.Element => (
   <div className="root">
-    <div className="string"></div>
+    <div className="string" />
     {visible && <span className="text">{note}</span>}
     <style jsx>{`
       .root {

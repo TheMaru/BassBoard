@@ -1,6 +1,7 @@
 import { Story } from '@storybook/react/types-6-0';
-import { Fingerboard, FingerboardProps } from './Fingerboard';
+
 import { NotePitch } from '../Note/Note.model';
+import { Fingerboard, FingerboardProps } from './Fingerboard';
 
 export default {
   title: 'Components/Fingerboard',

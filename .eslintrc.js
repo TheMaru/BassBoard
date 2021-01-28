@@ -28,8 +28,8 @@ const storiesOverride = createReactOverride({
   ...deps,
   files: ['**/*.stories.*'],
   rules: {
-    'import/no-anonymous-default-export': 'off'
-  }
+    'import/no-anonymous-default-export': 'off',
+  },
 });
 
 const pagesOverride = createReactOverride({
@@ -37,12 +37,17 @@ const pagesOverride = createReactOverride({
   files: ['pages/*'],
   rules: {
     'import/no-default-export': 'off',
-    'import/no-anonymous-default-export': 'off'
-  }
+    'import/no-anonymous-default-export': 'off',
+  },
 });
 
 module.exports = createConfig({
-  overrides: [customReactOverride, storiesOverride, pagesOverride, createTSOverride(deps)],
+  overrides: [
+    storiesOverride,
+    pagesOverride,
+    customReactOverride,
+    createTSOverride(deps),
+  ],
   settings: {
     'import/core-modules': ['styled-jsx/css'],
   },

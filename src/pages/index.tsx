@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { Fret } from '../components/Fret/Fret';
 import { NotePitch } from '../components/Note/Note.model';
 
-export default function Home(): JSX.Element {
+const Home = (): JSX.Element => {
   return (
     <div>
       <Head>
@@ -22,4 +22,6 @@ export default function Home(): JSX.Element {
       <footer>footer content</footer>
     </div>
   );
-}
+};
+
+export default Home;

@@ -1,18 +1,18 @@
-import { NotePitch } from '../Note/Note.model';
 import { Fret } from '../Fret/Fret';
+import { NotePitch } from '../Note/Note.model';
 
-export interface FingerboardProps {
+export type FingerboardProps = {
   amountFrets?: number;
-  stringRootNotes?: Array<NotePitch>;
+  stringRootNotes?: NotePitch[];
   stringSum?: number;
-}
+};
 
 export const Fingerboard = ({
   amountFrets = 21,
   stringRootNotes = [NotePitch.E, NotePitch.A, NotePitch.D, NotePitch.G],
-}: FingerboardProps) => {
+}: FingerboardProps): JSX.Element => {
   const renderFrets = () => {
-    let frets = [];
+    const frets = [];
     for (let i = 1; i <= amountFrets; ++i) {
       frets.push(
         <Fret
@@ -23,13 +23,13 @@ export const Fingerboard = ({
       );
     }
 
-    return <>{frets}</>;
+    return { frets };
   };
 
   return (
     <div className="root">
       <Fret fretNumber={0} stringRootNotes={stringRootNotes.reverse()} />
-      <div className="nut"></div>
+      <div className="nut" />
       {renderFrets()}
       <style jsx>{`
         .root {

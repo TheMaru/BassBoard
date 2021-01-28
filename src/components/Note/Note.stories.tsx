@@ -1,15 +1,16 @@
-import { Note, NoteProps } from './Note';
-import { NotePitch } from './Note.model';
 import { Story } from '@storybook/react/types-6-0';
 
+import { Note, NoteProps } from './Note';
+import { NotePitch } from './Note.model';
+
 export default {
-  title: 'Components/Note',
   component: Note,
+  title: 'Components/Note',
 };
 
 const defaultArgs = {
-  visible: true,
   note: NotePitch.E,
+  visible: true,
 };
 
 const Template: Story<NoteProps> = args => (

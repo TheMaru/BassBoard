@@ -13,7 +13,7 @@ export enum NotePitch {
   GA_HALF = 'G\u266F/A\u266D',
 }
 
-export const NoteSequence: Array<NotePitch> = [
+export const NoteSequence: NotePitch[] = [
   NotePitch.A,
   NotePitch.AB_HALF,
   NotePitch.B,

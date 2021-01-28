@@ -1,6 +1,7 @@
-import { Fret, FretProps } from './Fret';
-import { NotePitch } from '../Note/Note.model';
 import { Story } from '@storybook/react/types-6-0';
+
+import { NotePitch } from '../Note/Note.model';
+import { Fret, FretProps } from './Fret';
 
 export default {
   title: 'Components/Fret',
