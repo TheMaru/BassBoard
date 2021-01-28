@@ -6,7 +6,10 @@ export type FretProps = {
   stringRootNotes: NotePitch[];
 };
 
-const calculateNote = (stringRootNote: NotePitch, fretNumber: number) => {
+export const calculateNote = (
+  stringRootNote: NotePitch,
+  fretNumber: number
+): NotePitch => {
   const indexOfRoot = NoteSequence.indexOf(stringRootNote);
   const noteIndex = indexOfRoot + fretNumber;
   if (noteIndex >= NoteSequence.length) {
