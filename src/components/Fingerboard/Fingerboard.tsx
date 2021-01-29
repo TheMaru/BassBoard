@@ -23,7 +23,7 @@ export const Fingerboard = ({
       );
     }
 
-    return { frets };
+    return frets;
   };
 
   return (
