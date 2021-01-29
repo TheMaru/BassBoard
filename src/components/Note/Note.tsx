@@ -29,9 +29,9 @@ export const Note = ({ visible, note }: NoteProps): JSX.Element => (
 
       .string {
         position: absolute;
-        height: 50%;
+        height: 25%;
         width: 100%;
-        top: 0.25em;
+        top: 0.5em;
         background-color: var(--string-color);
       }
     `}</style>
