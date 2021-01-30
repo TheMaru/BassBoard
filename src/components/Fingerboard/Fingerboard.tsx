@@ -37,11 +37,12 @@ export const Fingerboard = ({
           justify-content: space-evenly;
           align-items: stretch;
           background-color: var(--fingerboard-color);
+          overflow-x: scroll;
         }
 
         .nut {
-          background-color: #1b1b1b;
-          width: 1em;
+          border-left: 0.15em solid #1b1b1b;
+          border-right: 0.15em solid #1b1b1b;
         }
       `}</style>
     </div>

@@ -45,15 +45,9 @@ export const Fret = ({
         .fret {
           position: relative;
           flex: 1 1 auto;
-        }
-
-        .fret:after {
-          content: '';
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          width: 0.3em;
-          background-color: #1b1b1b;
+          min-width: 4em;
+          border-left: 2px solid #1b1b1b;
+          border-right: 2px solid #1b1b1b;
         }
 
         .fret-marker {
@@ -87,11 +81,11 @@ export const Fret = ({
         }
 
         .marker1 {
-          top: 25%;
+          top: 20%;
         }
 
         .marker2 {
-          top: 75%;
+          top: 80%;
         }
       `}</style>
     </div>

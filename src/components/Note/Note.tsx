@@ -14,8 +14,9 @@ export const Note = ({ visible, note }: NoteProps): JSX.Element => (
         position: relative;
         display: flex;
         justify-content: center;
+        align-items: center;
         width: 100%;
-        margin: 1em 0;
+        height: 4em;
       }
 
       .text {
@@ -25,13 +26,13 @@ export const Note = ({ visible, note }: NoteProps): JSX.Element => (
         line-height: 1;
         z-index: 1;
         text-shadow: 0 0 5px #000;
+        font-size: 0.8em;
       }
 
       .string {
         position: absolute;
-        height: 25%;
+        height: 0.5em;
         width: 100%;
-        top: 0.5em;
         background-color: var(--string-color);
       }
     `}</style>
