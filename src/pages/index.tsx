@@ -1,9 +1,11 @@
 import Head from 'next/head';
 
-import { Fret } from '../components/Fret/Fret';
+import { Fingerboard } from '../components/Fingerboard/Fingerboard';
 import { NotePitch } from '../components/Note/Note.model';
 
 const Home = (): JSX.Element => {
+  const stringRootNotes = [NotePitch.E, NotePitch.A, NotePitch.D, NotePitch.G];
+
   return (
     <div>
       <Head>
@@ -13,10 +15,7 @@ const Home = (): JSX.Element => {
 
       <main>
         <h1>main content</h1>
-        <Fret
-          fretNumber={0}
-          stringRootNotes={[NotePitch.E, NotePitch.A, NotePitch.D, NotePitch.G]}
-        />
+        <Fingerboard amountFrets={22} stringRootNotes={stringRootNotes} />
       </main>
 
       <footer>footer content</footer>
