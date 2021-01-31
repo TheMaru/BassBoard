@@ -44,8 +44,7 @@ export const Fret = ({
       <style jsx>{`
         .fret {
           position: relative;
-          flex: 1 1 auto;
-          min-width: 4em;
+          flex: 1 1 0;
           border-left: 2px solid #1b1b1b;
           border-right: 2px solid #1b1b1b;
         }
