@@ -15,7 +15,7 @@ const Home = (): JSX.Element => {
 
       <main>
         <h1>main content</h1>
-        <Fingerboard amountFrets={22} stringRootNotes={stringRootNotes} />
+        <Fingerboard amountFrets={15} stringRootNotes={stringRootNotes} />
       </main>
 
       <footer>footer content</footer>
