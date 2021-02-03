@@ -4,6 +4,7 @@ import { NotePitch, NoteSequence } from '../Note/Note.model';
 export type FretProps = {
   fretNumber: number;
   stringRootNotes: NotePitch[];
+  visibleNotes: NotePitch[];
 };
 
 export const calculateNote = (
@@ -21,6 +22,7 @@ export const calculateNote = (
 export const Fret = ({
   fretNumber,
   stringRootNotes,
+  visibleNotes,
 }: FretProps): JSX.Element => {
   const fretMarkers = [3, 5, 7, 9, 15, 17, 19, 21];
   const doubleFretMarkers = [12, 24];
@@ -34,13 +36,16 @@ export const Fret = ({
           <div className="marker2" />
         </div>
       )}
-      {stringRootNotes.map(stringRootNote => (
-        <Note
-          key={`${fretNumber}-${stringRootNote}`}
-          visible
-          note={calculateNote(stringRootNote, fretNumber)}
-        />
-      ))}
+      {stringRootNotes.map(stringRootNote => {
+        const note = calculateNote(stringRootNote, fretNumber);
+        return (
+          <Note
+            key={`${fretNumber}-${stringRootNote}`}
+            visible={visibleNotes.includes(note)}
+            note={note}
+          />
+        );
+      })}
       <style jsx>{`
         .fret {
           position: relative;

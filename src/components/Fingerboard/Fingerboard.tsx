@@ -4,12 +4,14 @@ import { NotePitch } from '../Note/Note.model';
 export type FingerboardProps = {
   amountFrets?: number;
   stringRootNotes?: NotePitch[];
-  stringSum?: number;
+  stringSum?: number; // Todo implement change of amount of strings
+  visibleNotes: NotePitch[];
 };
 
 export const Fingerboard = ({
   amountFrets = 21,
   stringRootNotes = [NotePitch.E, NotePitch.A, NotePitch.D, NotePitch.G],
+  visibleNotes,
 }: FingerboardProps): JSX.Element => {
   const renderFrets = () => {
     const frets = [];
@@ -19,6 +21,7 @@ export const Fingerboard = ({
           key={`fret-${i}`}
           fretNumber={i}
           stringRootNotes={stringRootNotes}
+          visibleNotes={visibleNotes}
         />
       );
     }
@@ -28,7 +31,11 @@ export const Fingerboard = ({
 
   return (
     <div className="root">
-      <Fret fretNumber={0} stringRootNotes={stringRootNotes.reverse()} />
+      <Fret
+        fretNumber={0}
+        stringRootNotes={stringRootNotes.reverse()}
+        visibleNotes={visibleNotes}
+      />
       <div className="nut" />
       {renderFrets()}
       <style jsx>{`

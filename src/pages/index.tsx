@@ -33,7 +33,11 @@ const Home = (): JSX.Element => {
           toggleNote={toggleNote}
           visibleNotes={visibleNotes}
         />
-        <Fingerboard amountFrets={15} stringRootNotes={stringRootNotes} />
+        <Fingerboard
+          amountFrets={15}
+          stringRootNotes={stringRootNotes}
+          visibleNotes={visibleNotes}
+        />
       </main>
 
       <footer>footer content</footer>

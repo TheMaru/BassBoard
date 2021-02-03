@@ -1,7 +1,7 @@
 import { NotePitch } from './Note.model';
 
 export type NoteProps = {
-  visible: boolean;
+  visible?: boolean;
   note: NotePitch;
 };
 
