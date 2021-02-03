@@ -23,4 +23,8 @@ export const globalStyles = css.global`
     --fingerboard-color: #d2ab67;
     --string-color: #413d3e;
   }
+
+  main {
+    margin: 0 2em;
+  }
 `;

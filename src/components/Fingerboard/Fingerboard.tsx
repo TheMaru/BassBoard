@@ -38,6 +38,7 @@ export const Fingerboard = ({
           align-items: stretch;
           background-color: var(--fingerboard-color);
           overflow-x: scroll;
+          margin-top: 2em;
         }
 
         .nut {
