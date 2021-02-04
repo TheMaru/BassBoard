@@ -11,6 +11,7 @@ export default {
 const defaultArgs: FingerboardProps = {
   amountFrets: 15,
   stringRootNotes: [NotePitch.E, NotePitch.A, NotePitch.D, NotePitch.G],
+  visibleNotes: [],
 };
 
 const Template: Story<FingerboardProps> = args => <Fingerboard {...args} />;

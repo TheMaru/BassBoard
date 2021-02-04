@@ -11,6 +11,7 @@ export default {
 const defaultArgs = {
   fretNumber: 1,
   stringRootNotes: [NotePitch.E, NotePitch.A, NotePitch.D, NotePitch.G],
+  visibleNotes: [],
 };
 
 const Template: Story<FretProps> = args => <Fret {...args} />;
