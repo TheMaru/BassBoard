@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "author": {
-    "name": "Ben Thiede"
+    "name": "Ben Thiede",
+    "email" : "mailtothemaru@gmail.com"
   },
   "scripts": {
     "dev": "next dev",
