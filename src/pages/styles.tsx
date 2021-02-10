@@ -26,5 +26,6 @@ export const globalStyles = css.global`
 
   main {
     margin: 0 2em;
+    min-height: 100vh;
   }
 `;

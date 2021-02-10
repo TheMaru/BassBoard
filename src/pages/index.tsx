@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { ChangeEvent, useState } from 'react';
 
 import { Fingerboard } from '../components/Fingerboard/Fingerboard';
+import { Footer } from '../components/Footer/Footer';
 import { NotePitch } from '../components/Note/Note.model';
 import { ShowNotesControlArea } from '../components/ShowNotesControlArea/ShowNotesControlArea';
 
@@ -19,7 +20,7 @@ const Home = (): JSX.Element => {
   };
 
   return (
-    <div>
+    <>
       <Head>
         <title>Bass Board</title>
         <link rel="icon" href="/favicon.ico" />
@@ -39,9 +40,8 @@ const Home = (): JSX.Element => {
           visibleNotes={visibleNotes}
         />
       </main>
-
-      <footer>footer content</footer>
-    </div>
+      <Footer />
+    </>
   );
 };
 
