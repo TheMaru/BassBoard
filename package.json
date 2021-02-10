@@ -6,6 +6,7 @@
     "name": "Ben Thiede",
     "email" : "mailtothemaru@gmail.com"
   },
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
