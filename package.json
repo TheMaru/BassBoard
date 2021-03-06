@@ -4,7 +4,7 @@
   "private": true,
   "author": {
     "name": "Ben Thiede",
-    "email" : "mailtothemaru@gmail.com"
+    "email": "mailtothemaru@gmail.com"
   },
   "license": "MIT",
   "scripts": {
@@ -24,7 +24,7 @@
     "next": "10.0.5",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "styled-jsx": "^3.3.2"
+    "styled-jsx": "3.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

@@ -18,3 +18,9 @@ const Template: Story<FingerboardProps> = args => <Fingerboard {...args} />;
 
 export const Default = Template.bind({});
 Default.args = { ...defaultArgs };
+
+export const WithVisibleNotes = Template.bind({});
+WithVisibleNotes.args = {
+  ...defaultArgs,
+  visibleNotes: [NotePitch.C, NotePitch.E],
+};

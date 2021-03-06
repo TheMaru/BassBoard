@@ -26,7 +26,7 @@ export const Note = ({ visible, note }: NoteProps): JSX.Element => (
         line-height: 1;
         z-index: 1;
         text-shadow: 0 0 5px #000;
-        font-size: 0.8em;
+        font-size: 1.5em;
       }
 
       .string {
