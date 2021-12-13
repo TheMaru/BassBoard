@@ -1,5 +1,5 @@
 export type StringPitchControlAreaProps = {};
 
-export const StringPitchControlArea = () => (
+export const StringPitchControlArea = (): JSX.Element => (
   <div>my StringPitchControlArea</div>
 );
