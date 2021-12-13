@@ -1,12 +1,12 @@
 const {
   createConfig,
-  getDependencies,
+  getDependencies
 } = require('eslint-config-galex/src/createConfig');
 const {
-  createReactOverride,
+  createReactOverride
 } = require('eslint-config-galex/src/overrides/react');
 const {
-  createTSOverride,
+  createTSOverride
 } = require('eslint-config-galex/src/overrides/typescript');
 
 const deps = getDependencies();
@@ -18,18 +18,18 @@ const customReactOverride = createReactOverride({
       'warn',
       {
         namedComponents: 'arrow-function',
-        unnamedComponents: 'arrow-function',
-      },
-    ],
-  },
+        unnamedComponents: 'arrow-function'
+      }
+    ]
+  }
 });
 
 const storiesOverride = createReactOverride({
   ...deps,
   files: ['**/*.stories.*'],
   rules: {
-    'import/no-anonymous-default-export': 'off',
-  },
+    'import/no-anonymous-default-export': 'off'
+  }
 });
 
 const pagesOverride = createReactOverride({
@@ -37,8 +37,8 @@ const pagesOverride = createReactOverride({
   files: ['pages/*'],
   rules: {
     'import/no-default-export': 'off',
-    'import/no-anonymous-default-export': 'off',
-  },
+    'import/no-anonymous-default-export': 'off'
+  }
 });
 
 module.exports = createConfig({
@@ -46,16 +46,9 @@ module.exports = createConfig({
     storiesOverride,
     pagesOverride,
     customReactOverride,
-    createTSOverride(deps),
+    createTSOverride(deps)
   ],
   settings: {
-    'import/core-modules': ['styled-jsx/css'],
-  },
+    'import/core-modules': ['styled-jsx/css']
+  }
 });
-
-// module.exports = {
-//   extends: 'galex',
-//   settings: {
-//     "import/core-modules": ["styled-jsx/css"],
-//   }
-// };

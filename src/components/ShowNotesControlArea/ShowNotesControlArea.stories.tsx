@@ -1,15 +1,18 @@
-import { Story } from '@storybook/react/types-6-0';
+import { Story, Meta } from '@storybook/react/types-6-0';
 import { ChangeEvent, useState } from 'react';
 
 import { NotePitch } from '../Note/Note.model';
-import { ShowNotesControlArea } from './ShowNotesControlArea';
+import {
+  ShowNotesControlArea,
+  ShowNotesControlAreaProps
+} from './ShowNotesControlArea';
 
 export default {
   component: ShowNotesControlArea,
-  title: 'Components/ShowNotesControlArea',
-};
+  title: 'Components/ShowNotesControlArea'
+} as Meta;
 
-export const Default = (): JSX.Element => {
+export const Default: Story<ShowNotesControlAreaProps> = () => {
   const [visibleNotes, setVisibleNotes] = useState<NotePitch[]>([]);
   const toggleNote = (event: ChangeEvent<HTMLInputElement>) => {
     if (event.target.checked) {

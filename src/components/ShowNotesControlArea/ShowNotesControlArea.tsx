@@ -5,7 +5,7 @@ import {
   FormGroup,
   FormControlLabel,
   Grid,
-  Switch,
+  Switch
 } from '@material-ui/core';
 import { ExpandMore } from '@material-ui/icons';
 import { ChangeEvent } from 'react';
@@ -19,30 +19,28 @@ export type ShowNotesControlAreaProps = {
 
 export const ShowNotesControlArea = ({
   toggleNote,
-  visibleNotes,
-}: ShowNotesControlAreaProps): JSX.Element => {
-  return (
-    <Accordion defaultExpanded>
-      <AccordionSummary expandIcon={<ExpandMore />}>Notes</AccordionSummary>
-      <AccordionDetails>
-        <Grid container align-content="center" align-items="center">
-          <FormGroup row>
-            {NoteSequence.map(note => (
-              <FormControlLabel
-                key={note}
-                label={note}
-                control={
-                  <Switch
-                    checked={visibleNotes.includes(note)}
-                    onChange={toggleNote}
-                    value={note}
-                  />
-                }
-              />
-            ))}
-          </FormGroup>
-        </Grid>
-      </AccordionDetails>
-    </Accordion>
-  );
-};
+  visibleNotes
+}: ShowNotesControlAreaProps): JSX.Element => (
+  <Accordion defaultExpanded>
+    <AccordionSummary expandIcon={<ExpandMore />}>Notes</AccordionSummary>
+    <AccordionDetails>
+      <Grid container align-content="center" align-items="center">
+        <FormGroup row>
+          {NoteSequence.map(note => (
+            <FormControlLabel
+              key={note}
+              label={note}
+              control={
+                <Switch
+                  checked={visibleNotes.includes(note)}
+                  onChange={toggleNote}
+                  value={note}
+                />
+              }
+            />
+          ))}
+        </FormGroup>
+      </Grid>
+    </AccordionDetails>
+  </Accordion>
+);
